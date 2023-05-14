@@ -49,8 +49,8 @@
                     </li>
                 </ul>
             </div>
-
-             <!-- Reloj -->
+            
+            <!-- Reloj -->
              <div id="app">
                 <div class="container-clock">
                   <h1 id="time">00:00:00</h1>
@@ -70,6 +70,14 @@
     </nav>
     <!-- Fin navBar -->
 
+    <!-- API Temperatura -->
+    <div class="container mt-3" id="clima">
+        <div class="weather-widget">
+            <h3>Su temperatura actual es:</h3>
+            <p id="temperatura-actual">Cargando...</p>
+        </div>
+    </div>
+    <!-- fin API Temperatura -->
     
     <div class="container my-3">
         <!-- Hero portada principal con carousel -->
@@ -241,6 +249,7 @@
 
 
     <script src="js/jquery-3.7.0.min.js"></script>
+    <script src="js/tiempo.js"></script>
 
     <!--Link Reloj JS-->
     <script src="js/clock.js"></script>
