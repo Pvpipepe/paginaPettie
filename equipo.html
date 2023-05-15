@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,7 +24,8 @@
 
     <title>Equipo</title>
 </head>
-<body data-bs-theme="light">
+
+<body data-bs-theme="light" id="body">
     <!-- Inicio NavBar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
@@ -35,13 +37,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Registro</a>
+                        <a class="nav-link" href="register.html">Registro</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="productos.html">Productos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Sobre Nosotros</a>
+                        <a class="nav-link" href="nosotros.html">Sobre Nosotros</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="equipo.html">Nuestro Equipo</a>
@@ -49,12 +51,12 @@
                 </ul>
             </div>
 
-             <!-- Reloj -->
-             <div id="app">
+            <!-- Reloj -->
+            <div id="app">
                 <div class="container-clock">
-                  <h1 id="time">00:00:00</h1>
+                    <h1 id="time">00:00:00</h1>
                 </div>
-              </div>
+            </div>
             <!-- Fin reloj -->
 
             <!--MODO OSCURO-->
@@ -64,7 +66,7 @@
                 </button>
             </div>
             <!-- FIN MODO OSCURO -->
-            
+
         </div>
     </nav>
     <!-- Fin navBar -->
@@ -74,57 +76,86 @@
         <h1>La seguridad es lo más importante<br> Por eso contamos con los mejores especialistas</h1>
     </section>
 
+    <!-- API Temperatura -->
+    <div class="container mt-3" id="clima">
+        <div class="weather-widget">
+            <h3>Su temperatura actual es:</h3>
+            <p id="temperatura-actual">Cargando...</p>
+        </div>
+    </div>
+    <!-- fin API Temperatura -->
+
 
     <div class="containerCartaSobre" id="containerCartaSobre">
-     
-        <div class="card border-info mb-3" style="width: 18rem;">
-          <img src="css/Imagen/vet1_sobre_nosotros.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-title">Cristiano Ronaldo</p>
-            <p class="card-text">- Medico Veterinario <br> - Egresado el año 2013 <br>
-              - Anestesiologo</p>                  
-          </div>              
-          </div>
-  
-          <div class="card border-info mb-3" style="width: 18rem;">
+
+        <div id="cartulina1" class="card border-info mb-3" style="width: 18rem;">
+            <img src="css/Imagen/vet1_sobre_nosotros.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <p class="card-title">Cristiano Ronaldo</p>
+                <p class="card-text">- Medico Veterinario <br> - Egresado el año 2013 <br>
+                    - Anestesiologo</p>
+            </div>
+        </div>
+
+        <div id="cartulina2" class="card border-info mb-3" style="width: 18rem;">
             <img src="css/Imagen/vet2_sobre_nosotros.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-              <p class="card-title">Carlitos Vera</p>
-              <p class="card-text">- Medico Veterinario <br> - Egresado el año 2004 <br>
-                - Peluquero
-                </p>                  
-            </div>              
+                <p class="card-title">Carlitos Vera</p>
+                <p class="card-text">- Medico Veterinario <br> - Egresado el año 2004 <br>
+                    - Peluquero
+                </p>
             </div>
-  
-            <div class="card border-info mb-3" style="width: 18rem;">
-              <img src="css/Imagen/vet1_sobre_nosotros.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
+        </div>
+
+        <div id="cartulina3" class="card border-info mb-3" style="width: 18rem;">
+            <img src="css/Imagen/vet1_sobre_nosotros.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
                 <p class="card-title">Messi Naldo</p>
                 <p class="card-text">- Medico Veterinario <br> - Egresado el año 2018 <br>
-                  - Cardiologo</p>                  
-              </div>              
-              </div>
-  
+                    - Cardiologo</p>
+            </div>
+        </div>
+
+        <div class="container" id="containerPatitas">
+            <button onclick="cambiarFondo()" class="btn btn-primary mt-5" id="coloresBlack">
+                Clientes Semanales🐾
+            </button>
         </div>
 
 
-        <!--Link Reloj JS-->
-        <script src="js/clock.js"></script>
-        <!--fin Reloj JS-->
-    
-    
-        <!-- JavaScript -->
-        <script src="js/main.js"></script>
-    
-            
-        <!-- Jquery -->
-        <script src="js/jquery.js"></script>
-        <!-- fin Jquery-->
-    
-        <!-- link bootstrap   -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-            crossorigin="anonymous"></script>
-        <!-- fin bootstrap -->
+    </div>
+
+    <div class="row">
+        <footer class="py-3 my-4">
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                <li class="nav-item"><a href="#!" class="nav-link px-2 text-muted">FAQs</a></li>
+                <li class="nav-item"><a href="#!" class="nav-link px-2 text-muted">Novedades</a></li>
+                <li class="nav-item"><a href="#!" class="nav-link px-2 text-muted">Próximamente</a></li>
+            </ul>
+            <p class="text-center text-muted">© <span id="currentYear"></span> PettieDog</p>
+        </footer>
+    </div>
+
+    <script src="js/jquery-3.7.0.min.js"></script>
+    <script src="js/tiempo.js"></script>
+    <!--Link Reloj JS-->
+    <script src="js/clock.js"></script>
+    <!--fin Reloj JS-->
+
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+
+
+    <!-- Jquery -->
+    <script src="js/jquery.js"></script>
+    <!-- fin Jquery-->
+
+    <!-- link bootstrap   -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <!-- fin bootstrap -->
 </body>
+
 </html>

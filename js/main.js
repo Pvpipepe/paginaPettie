@@ -5,6 +5,8 @@ window.addEventListener("load", () => {
 });
 //Fin año actualizado
 
+
+//TEMA OSCURO INICIO
 //Para crear el tema oscuro
 const temaOscuro = () => {
   document.querySelector("body").setAttribute("data-bs-theme", "dark");
@@ -48,4 +50,13 @@ const validacionRegister = (() => {
     }, false)
   })
 })()
+//TEMA OSCURO FIN
+
+//Cambiar color de cartas con js en vista equipo
+function cambiarFondo(){
+  document.getElementById('cartulina1').style.backgroundColor = 'grey';
+  document.getElementById('cartulina3').style.backgroundColor = 'grey';
+  document.getElementById('cartulina2').style.backgroundColor = 'grey';
+}
+//fin Cambiar color de cartas con js en vista equipo
 
